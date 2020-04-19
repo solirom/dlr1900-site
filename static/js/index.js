@@ -109,7 +109,7 @@ dglr.actions.searchEntries = function(id) {
                 l = l.toUpperCase();
                 var item = {
                     "id": element.id,
-                    "l":  element.fields.i.toLowerCase().replace(/[áéíóúắấşţ]/g, m => dglr.data.chars[m])                        
+                    "l":  l                       
                 }
                 processedData.push(item);
             });
@@ -123,4 +123,4 @@ dglr.actions.searchEntries = function(id) {
     }       
 };
 
-//document.getElementById("search-string").value = "cortel";    
+//document.getElementById("search-string").value = "eminescu";    
