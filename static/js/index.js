@@ -50,7 +50,7 @@ document.addEventListener('click', event => {
 	if (target.matches("#results-container ul.list li, #results-container ul.list li span")) {
         let parent = target.parentNode;
         let chidren = Array.from(parent.children);
-        let indglr = chidren.indglrOf(target);
+        let indglr = chidren.indexOf(target);
         var id = dglr.resultDisplayContainer.items[indglr]._values["id"];
 
         fetch("/data/html/" + id + ".html")
