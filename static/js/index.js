@@ -1,19 +1,19 @@
-window.dex = {};
+window.dglr = {};
 
-dex.resultDisplayOptions = {
+dglr.resultDisplayOptions = {
   valueNames: ["headword", "omonym-number", "grammatical-info", "id"],
   item: "results-item"
 };
-dex.resetResults = function() {
+dglr.resetResults = function() {
     $("#results-container .list").show();
     $("#details-container").hide(); 
-    dex.resultDisplayContainer.clear();
+    dglr.resultDisplayContainer.clear();
     $("#details-container").empty();
 };
-dex.data = {};
-dex.actions = {};
-dex.data.chars = {'á': 'a','é': 'e','í': 'i', 'ó': 'o', 'ú': 'u', 'ắ': 'ă', 'ấ': 'â', 'ş': 'ș', 'ţ': 'ț'};
-dex.data.searchString = "";
+dglr.data = {};
+dglr.actions = {};
+dglr.data.chars = {'á': 'a','é': 'e','í': 'i', 'ó': 'o', 'ú': 'u', 'ắ': 'ă', 'ấ': 'â', 'ş': 'ș', 'ţ': 'ț'};
+dglr.data.searchString = "";
 
 $.i18n().load({
     'ro': '/modules/i18n/ro.json',
@@ -42,7 +42,7 @@ $("#navigation-toolbar").controlgroup();
 
 var values = [];
 
-dex.resultDisplayContainer = new List("results-container", dex.resultDisplayOptions, values);
+dglr.resultDisplayContainer = new List("results-container", dglr.resultDisplayOptions, values);
 
 document.addEventListener('click', event => {
     const target = event.target;
@@ -50,10 +50,10 @@ document.addEventListener('click', event => {
 	if (target.matches("#results-container ul.list li, #results-container ul.list li span")) {
         let parent = target.parentNode;
         let chidren = Array.from(parent.children);
-        let index = chidren.indexOf(target);
-        var id = dex.resultDisplayContainer.items[index]._values["id"];
+        let indglr = chidren.indglrOf(target);
+        var id = dglr.resultDisplayContainer.items[indglr]._values["id"];
 
-        fetch("/data/2019/html/" + id + ".html")
+        fetch("/data/html/" + id + ".html")
             .then((response) => response.text())
             .then((data) => {
                 var detailsContainer = document.getElementById("details-container");
@@ -65,7 +65,7 @@ document.addEventListener('click', event => {
     }
     
     if (target.matches("#search-button")) {
-        dex.actions.searchEntries();
+        dglr.actions.searchEntries();
     }    
     
     
@@ -83,19 +83,19 @@ document.addEventListener('keydown', event => {
     const target = event.target;
         
 	if (event.keyCode === 13 && target.matches("#search-string")) {
-        dex.actions.searchEntries();
+        dglr.actions.searchEntries();
     }
 }, false);
 
-dex.actions.searchEntries = function(id) {
-    dex.resetResults();
+dglr.actions.searchEntries = function(id) {
+    dglr.resetResults();
     
     var searchString = $("#search-string").val();
     if (searchString != "") {
-        searchString = searchString.toLowerCase().replace(/[áéíóúắấşţ]/g, m => dex.data.chars[m]);
-        dex.data.searchString = searchString;
+        searchString = searchString.toLowerCase().replace(/[áéíóúắấşţ]/g, m => dglr.data.chars[m]);
+        dglr.data.searchString = searchString;
         
-        fetch("/search/api/dex2019/_search", {
+        fetch("/search/api/dglr/_search", {
             method: "POST",
             body: '{"size": 1000, "from": 0, "query": {"boost": 1, "query": "' + searchString + '"}, "fields": ["*"]}'
         })
@@ -109,13 +109,13 @@ dex.actions.searchEntries = function(id) {
                     "headword": element.fields.s,
                     "omonym-number": element.fields.o,
                     "id": element.id,
-                    "l":  element.fields.s.toLowerCase().replace(/[áéíóúắấşţ]/g, m => dex.data.chars[m])                        
+                    "l":  element.fields.s.toLowerCase().replace(/[áéíóúắấşţ]/g, m => dglr.data.chars[m])                        
                 }
                 processedData.push(item);
             });
             processedData.sort((a, b) => (a.l > b.l) ? 1 : -1)
 
-            dex.resultDisplayContainer.add(processedData); 
+            dglr.resultDisplayContainer.add(processedData); 
         })
         .catch((error) => {
             console.error('Error:', error);
