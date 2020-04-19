@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Claudius Teodorescu"
+		],
+		"last-updated": "2019-12-31",
+		"locale": "ro"
+	},
+	"header-academy-name": "ACADEMIA ROMÂNĂ",
+	"header-dictionary-name": "DEX - Dicționarul explicativ al limbii române",
+	"menu-home": "Acasă",
+	"menu-about": "Despre DEX",
+	"menu-official-lists": "Liste oficiale de cuvinte",
+	"menu-copyright": "Drepturi de autor",
+	"menu-statistics": "Statistici",
+	"menu-contact": "Contact"
+}

@@ -1,0 +1,119 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	    <title>DEX - Dicționarul explicativ al limbii române</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+		<meta name="description" content="DEX" />
+		<meta name="description" content="Dicționarul explicativ al limbii române" />
+		<meta name="author" content="Claudius Teodorescu"/>		
+		<!-- start favicon -->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/images/favicon/apple-touch-icon-57x57.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/images/favicon/apple-touch-icon-114x114.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/images/favicon/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/images/favicon/apple-touch-icon-144x144.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/static/images/favicon/apple-touch-icon-60x60.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/favicon/apple-touch-icon-120x120.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/images/favicon/apple-touch-icon-76x76.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/images/favicon/apple-touch-icon-152x152.png"/>
+        <link rel="icon" type="image/png" href="/static/images/favicon/favicon-196x196.png" sizes="196x196"/>
+        <link rel="icon" type="image/png" href="/static/images/favicon/favicon-96x96.png" sizes="96x96"/>
+        <link rel="icon" type="image/png" href="/static/images/favicon/favicon-32x32.png" sizes="32x32"/>
+        <link rel="icon" type="image/png" href="/static/images/favicon/favicon-16x16.png" sizes="16x16"/>
+        <link rel="icon" type="image/png" href="/static/images/favicon/favicon-128.png" sizes="128x128"/>
+        <meta name="application-name" content="Dicționarul explicativ al limbii române"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF"/>
+        <meta name="msapplication-TileImage" content="mstile-144x144.png"/>
+        <meta name="msapplication-square70x70logo" content="mstile-70x70.png"/>
+        <meta name="msapplication-square150x150logo" content="mstile-150x150.png"/>
+        <meta name="msapplication-wide310x150logo" content="mstile-310x150.png"/>
+        <meta name="msapplication-square310x310logo" content="mstile-310x310.png"/>
+		<!-- end favicon -->		
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/index.css"/>		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">/**/</script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous">/**/</script>
+        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+		
+        <!-- i18n-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.min.js" integrity="sha256-a57FJT1vfxYpqPhdhvt5rDlIpkzBooUezMu233mfx/0=" crossorigin="anonymous">/**/</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.min.js" integrity="sha256-mnmAZ20bByyKZAXa5gp9Dmf4cM09GYS+zfTIxf2vVcI=" crossorigin="anonymous">/**/</script>
+
+		<!-- menu -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css"/>
+		<script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js">/**/</script>
+		
+		<!-- search result container -->
+		<script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js">/**/</script>
+		
+        <!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+		
+		<script type="module" charset="utf-8" src="/static/js/index.js" defer="true">/**/</script>
+	</head>
+	<body>
+	    <div id="content">
+            <!--<div id="language-selector-container">
+                <select id="language-selector">
+                    <option value="ro">română</option>
+                    <option value="en">english</option>
+                </select>              
+            </div>-->
+			<div id="logo-container">
+				<img id="logo" src="http://lingv.ro/index_clip_image002.gif" alt="Institutul de lingvistică"/>
+			</div>	    
+			<div id="summary-container">
+			    <h2 data-i18n="header-academy-name"/>
+				<h2 data-i18n="header-dictionary-name"/>
+			</div>
+			<!--<div id="menu-container">
+                <ul id="menu">
+                	<li>
+                        <a href="#" data-i18n="menu-home"/>
+                    </li>
+                	<li>
+                        <a href="about.html" data-i18n="menu-about"/>
+                    </li>
+                	<li>
+                        <a href="#" data-i18n="menu-official-lists"/>
+                    </li>                    
+                	<li>
+                        <a href="#" data-i18n="menu-copyright"/>
+                    </li>
+                	<li>
+                        <a href="#" data-i18n="menu-statistics"/>
+                    </li>
+                	<li>
+                        <a href="#" data-i18n="menu-contact"/>
+                    </li>
+                </ul>				
+			</div>-->
+			<div id="search-component">
+				<input id="search-string" placeholder="" value="" maxlength="70" autocomplete="off" type="text"></input>
+				<button id="search-button">&#xf002;</button>
+				<!-- <kuberam-advanced-search/> -->
+			</div>
+			<div id="results-container">
+    			<ul class="list"></ul>
+                <div id="details-container" style="display: none;"></div>
+			</div>
+			<div id="footer">
+    			<div id="navigation-toolbar">
+    			    <button>&#xf100;</button>
+    			    <button>&#xf104;</button>
+    			    <button id="view-flip">&#xf03a;</button>
+    			    <button>&#xf105;</button>
+    			    <button>&#xf101;</button>
+    			    <button id="scrollToTop-button">&#xf062;</button>
+    			</div>
+			</div>
+	    </div>
+        <div style="display:none;">
+            <li id="results-item">
+                <span class="headword" style="font-weight: bold;"/>
+                <span class="omonym-number"/>
+                <span class="grammatical-info"/>
+            </li>
+        </div>	    
+	</body>
+</html>

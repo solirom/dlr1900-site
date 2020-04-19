@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Claudius Teodorescu"
+		],
+		"last-updated": "2019-12-31",
+		"locale": "en"
+	},
+	"header-academy-name": "ROMANIAN ACADEMY",
+	"header-dictionary-name": "Explicative Dictionary of the Romanian language",
+	"menu-home": "Home",
+	"menu-about": "About DLR",
+	"menu-official-lists": "Official lists of words",
+	"menu-copyright": "Copyright",
+	"menu-statistics": "Statistics",
+	"menu-contact": "Contact"
+}
