@@ -106,10 +106,8 @@ dglr.actions.searchEntries = function(id) {
             
             data.hits.forEach(element => {
                 var item = {
-                    "headword": element.fields.s,
-                    "omonym-number": element.fields.o,
                     "id": element.id,
-                    "l":  element.fields.s.toLowerCase().replace(/[áéíóúắấşţ]/g, m => dglr.data.chars[m])                        
+                    "l":  element.fields.i.toLowerCase().replace(/[áéíóúắấşţ]/g, m => dglr.data.chars[m])                        
                 }
                 processedData.push(item);
             });
