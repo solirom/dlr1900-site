@@ -1,7 +1,7 @@
 window.dglr = {};
 
 dglr.resultDisplayOptions = {
-  valueNames: ["headword", "omonym-number", "grammatical-info", "id"],
+  valueNames: ["l", "id"],
   item: "results-item"
 };
 dglr.resetResults = function() {
