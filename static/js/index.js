@@ -105,6 +105,8 @@ dglr.actions.searchEntries = function(id) {
             var processedData = [];
             
             data.hits.forEach(element => {
+                var l = element.fields.i.toLowerCase().replace(/[áéíóúắấşţ]/g, m => dglr.data.chars[m]);
+                l = l.toUpperCase();
                 var item = {
                     "id": element.id,
                     "l":  element.fields.i.toLowerCase().replace(/[áéíóúắấşţ]/g, m => dglr.data.chars[m])                        
