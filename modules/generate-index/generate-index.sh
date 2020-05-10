@@ -18,9 +18,7 @@ curl -X PUT http://localhost:8095/api/$index_name -d @"/var/web/$site_name/modul
 cd $current_dir
 for file_name in  /var/tmp/dglr-data/json/*
 do
-    echo "Processing $file_name"
     base_name=$(basename "$file_name" | cut -d. -f1)
-    echo "$base_name"
     curl -X PUT http://localhost:8095/api/$index_name/$base_name -d @$file_name
 done
 
